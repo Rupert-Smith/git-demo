@@ -1,0 +1,8 @@
+name: "My first action"
+on: "workflow_dispatch"
+jobs:
+  print-to-console:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Print hey to the console"
+        run: "echo Hey!"
