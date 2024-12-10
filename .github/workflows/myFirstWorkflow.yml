@@ -22,6 +22,6 @@ jobs:
         run: npm ci
       - name: "Run tests"
         run: npm test
-  print-report:
-    needs: "run-test"
-    uses: "./printReport.yml"
+  # print-report:
+  #   needs: "run-test"
+  #   uses: "./printReport.yml"
