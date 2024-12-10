@@ -1,0 +1,8 @@
+name: print-report
+on: workflow_call
+jobs:
+  prints-report:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Output report"
+        run: echo "Something went wrong"
