@@ -22,3 +22,9 @@ jobs:
         run: npm ci
       - name: "Run tests"
         run: npm test
+  print-report:
+    runs-on: "ubuntu-latest"
+    if: failure()
+    steps:
+      - name: "Output report"
+        run: echo "Something went wrong"
