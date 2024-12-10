@@ -24,6 +24,7 @@ jobs:
         run: npm test
   print-report:
     runs-on: "ubuntu-latest"
+    needs: "run-test"
     if: failure()
     steps:
       - name: "Output report"
