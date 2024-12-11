@@ -22,7 +22,6 @@ export default function Todos() {
   return (
     <div>
       <button onClick={handleGetXml}>get XML</button>
-      Test
     </div>
   );
 }

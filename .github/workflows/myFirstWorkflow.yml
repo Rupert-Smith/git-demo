@@ -7,6 +7,7 @@ jobs:
       - name: "print to console"
         run: 'echo "hey"'
   testing:
+    needs: "first-job"
     runs-on: "ubuntu-latest"
     steps:
       - name: "Get repo"
@@ -15,3 +16,10 @@ jobs:
         run: "npm i"
       - name: "test our code"
         run: "npm run test"
+  output-report:
+    needs: "testing"
+    if: failure()
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "write report"
+        run: "echo here is your report"
